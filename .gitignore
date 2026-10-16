@@ -80,3 +80,10 @@ coverage/
 *.psd
 *.sketch
 *.fig
+
+# --- External UI reference (Stitch designs; not source) ---
+ui/
+
+# --- Local scratch files (commit message drafts, etc.) ---
+.commit-msg.txt
+*.tmp
