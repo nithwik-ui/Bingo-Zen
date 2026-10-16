@@ -1,0 +1,82 @@
+# ------------------------------------------------------------
+# Bingo Zen — top-level gitignore
+# ------------------------------------------------------------
+
+# --- Flutter / Dart ---
+.dart_tool/
+.packages
+.pub-cache/
+.pub/
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+**/generated_plugin_registrant.*
+
+# IDE
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+
+# Build outputs (kept locally, regenerated per build)
+**/build/
+**/.dart_tool/
+
+# Native build folders
+**/android/.gradle/
+**/android/captures/
+**/android/local.properties
+**/android/key.properties
+**/android/**/GeneratedPluginRegistrant.java
+**/ios/Pods/
+**/ios/.symlinks/
+**/ios/Flutter/Generated.xcconfig
+**/macos/Pods/
+
+# --- Node.js / TypeScript (server) ---
+server/node_modules/
+server/dist/
+server/*.log
+server/.env
+server/.env.local
+server/.env.*.local
+
+# --- Secrets / Local config ---
+*.pem
+*.key
+*.crt
+.env
+.env.local
+.env.*.local
+secrets/
+*.log
+npm-debug.log*
+yarn-debug.log*
+
+# --- OS junk ---
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+Thumbs.db
+
+# --- Editors ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# --- Test artifacts ---
+coverage/
+*.lcov
+.nyc_output
+
+# --- PWA icon source PSD/Figma (heavy binary blobs) ---
+*.psd
+*.sketch
+*.fig
