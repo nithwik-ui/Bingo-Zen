@@ -68,6 +68,16 @@ export async function createServer(): Promise<ServerHandle> {
   app.use(express.json({ limit: '64kb' }));
   app.disable('x-powered-by');
 
+  // Health check — used by Render, load balancers, uptime monitors.
+  app.get('/health', (_req, res) => {
+    res.json({
+      ok: true,
+      ts: Date.now(),
+      uptime: process.uptime(),
+      version: process.env.npm_package_version ?? null,
+    });
+  });
+
   const bucket = new Map<string, { count: number; until: number }>();
   const rateLimit = (key: string, max: number, windowMs: number) => {
     const now = Date.now();
